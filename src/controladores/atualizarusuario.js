@@ -1,5 +1,5 @@
 const { contas } = require("../bancodedados")
-const { validarCpf } = require("../intermediarios/validarcdpf&email")
+const { validarCpf } = require("../intermediarios/validarcpf&email")
 
 const atualizarusuario = (req, res) => {
     const { numeroConta } = req.params
