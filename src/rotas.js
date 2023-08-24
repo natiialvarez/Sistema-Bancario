@@ -14,6 +14,8 @@ const { sacar } = require("./controladores/transacoes/sacar");
 const { senhaConta, senhaContaOrigem } = require("./intermediarios/body/senhaconta");
 const { transferir } = require("./controladores/transacoes/transferencia");
 const { validarContaOrigem, validarContaDestino } = require("./intermediarios/body/contastransferencia");
+const { numeroConta, senhaDaConta } = require("./intermediarios/query/conta&senha");
+const { consultarSaldor } = require("./controladores/consultarsaldo");
 
 rotas.get("/contas", verificarSenha, listarContas)
 rotas.post("/contas", validarCpf, validarEmail, criarConta)
@@ -22,7 +24,7 @@ rotas.delete("/contas/:numeroConta", verificarNumero, excluirConta)
 rotas.post("/transacoes/depositar", validarBodyConta, validarBodyValor, depositar)
 rotas.post("/transacoes/sacar", validarBodyConta, senhaConta, validarBodyValor, sacar)
 rotas.post("/transacoes/transferir", validarContaOrigem, validarContaDestino, senhaContaOrigem, validarBodyValor, transferir)
-
+rotas.get("/contas/saldo", numeroConta, senhaDaConta, consultarSaldor)
 module.exports = {
     rotas
 }
