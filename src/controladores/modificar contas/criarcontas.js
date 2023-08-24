@@ -1,4 +1,5 @@
-const { contas } = require("../bancodedados")
+const { contas } = require("../../bancodedados")
+
 let numero = 1
 
 const criarConta = (req, res) => {

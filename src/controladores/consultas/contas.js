@@ -1,4 +1,5 @@
-const { contas } = require("../bancodedados")
+const { contas } = require("../../bancodedados")
+
 
 const listarContas = (req, res) => {
     if (contas.length === 0) {

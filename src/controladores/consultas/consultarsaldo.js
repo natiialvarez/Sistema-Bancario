@@ -1,4 +1,5 @@
-const { contas } = require("../bancodedados")
+const { contas } = require("../../bancodedados")
+
 
 const consultarSaldor = (req, res) => {
     const { numero_conta } = req.query

@@ -1,4 +1,5 @@
-const { contas } = require("../bancodedados")
+const { contas } = require("../../bancodedados")
+
 
 const excluirConta = (req, res) => {
     const { numeroConta } = req.params
