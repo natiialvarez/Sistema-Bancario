@@ -7,8 +7,8 @@ module.exports = {
     },
     contas: [
         {
-            numero: 1,
-            saldo: 0,
+            numero: 0,
+            saldo: 65,
             usuario: {
                 nome: "Foo Bar",
                 cpf: "00011122233",
