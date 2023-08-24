@@ -9,10 +9,10 @@ const { validarCpf, validarEmail } = require("./intermediarios/validarcpf&email"
 const { verificarNumero } = require("./intermediarios/verificarId");
 const { excluirConta } = require("./controladores/excluirconta");
 const { validarBodyConta, validarBodyValor } = require("./intermediarios/body/validarBODYconta");
-const { depositar } = require("./controladores/depositar");
-const { sacar } = require("./controladores/sacar");
+const { depositar } = require("./controladores/transacoes/depositar");
+const { sacar } = require("./controladores/transacoes/sacar");
 const { senhaConta, senhaContaOrigem } = require("./intermediarios/body/senhaconta");
-const { transferir } = require("./controladores/transferencia");
+const { transferir } = require("./controladores/transacoes/transferencia");
 const { validarContaOrigem, validarContaDestino } = require("./intermediarios/body/contastransferencia");
 
 rotas.get("/contas", verificarSenha, listarContas)

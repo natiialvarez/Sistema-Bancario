@@ -1,4 +1,4 @@
-const { contas, saques } = require("../bancodedados")
+const { contas, saques } = require("../../bancodedados")
 
 const sacar = (req, res) => {
     const { numero_conta, valor } = req.body

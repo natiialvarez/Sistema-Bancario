@@ -1,4 +1,4 @@
-const { contas, transferencias } = require("../bancodedados")
+const { contas, transferencias } = require("../../bancodedados")
 
 const transferir = (req, res) => {
     const { numero_conta_origem, numero_conta_destino, valor } = req.body
