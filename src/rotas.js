@@ -8,11 +8,14 @@ const { atualizarusuario } = require("./controladores/atualizarusuario");
 const { validarCpf, validarEmail } = require("./intermediarios/validarcpf&email");
 const { verificarNumero } = require("./intermediarios/verificarId");
 const { excluirConta } = require("./controladores/excluirconta");
+const { validarBodyConta, validarBodyValor } = require("./intermediarios/validarBODYconta");
+const { depositar } = require("./controladores/depositar");
 
 rotas.get("/contas", verificarSenha, listarContas)
 rotas.post("/contas", validarCpf, validarEmail, criarConta)
 rotas.put("/contas/:numeroConta/usuario", verificarNumero, validarCpf, validarEmail, atualizarusuario)
 rotas.delete("/contas/:numeroConta", verificarNumero, excluirConta)
+rotas.post("/transacoes/depositar", validarBodyConta, validarBodyValor, depositar)
 
 module.exports = {
     rotas
