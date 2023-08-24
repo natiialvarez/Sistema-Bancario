@@ -10,12 +10,12 @@ module.exports = {
             numero: 1,
             saldo: 0,
             usuario: {
-                nome: "a",
-                cpf: "0",
-                data_nascimento: "1",
-                telefone: "0",
-                email: "0",
-                senha: 1
+                nome: "Foo Bar",
+                cpf: "00011122233",
+                data_nascimento: "2001-03-15",
+                telefone: "11999998888",
+                email: "foo@bar.com",
+                senha: "1234"
             }
         }
     ],
