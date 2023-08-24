@@ -1,4 +1,5 @@
 const { contas, transferencias } = require("../../bancodedados")
+const format = require("date-fns/format")
 
 const transferir = (req, res) => {
     const { numero_conta_origem, numero_conta_destino, valor } = req.body
@@ -10,9 +11,9 @@ const transferir = (req, res) => {
     }
     contaOrigem.saldo -= dinheiroTransferido
     contaDestino.saldo += dinheiroTransferido
-
+    const data = format(new Date(), "yyyy-MM-dd H:mm:ss")
     const tranferenciaExtrato = {
-        data: new Date(),
+        data: data,
         numero_conta_origem,
         numero_conta_destino,
         valor
