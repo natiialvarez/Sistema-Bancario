@@ -1,6 +1,6 @@
 const { contas } = require("../../bancodedados")
 
-const senhaConta = (req, res, next) => {
+const validarSenhaConta = (req, res, next) => {
     const { numero_conta, senha } = req.body
     const conta = contas.find((conta) => conta.numero === Number(numero_conta))
     if (!senha) {
@@ -11,7 +11,7 @@ const senhaConta = (req, res, next) => {
     }
     next()
 }
-const senhaContaOrigem = (req, res, next) => {
+const validarSenhaContaOrigem = (req, res, next) => {
     const { numero_conta_origem, senha } = req.body
     const conta = contas.find((conta) => conta.numero === Number(numero_conta_origem))
     if (!senha) {
@@ -24,6 +24,6 @@ const senhaContaOrigem = (req, res, next) => {
 }
 
 module.exports = {
-    senhaConta,
-    senhaContaOrigem
+    validarSenhaConta,
+    validarSenhaContaOrigem
 }

@@ -1,6 +1,6 @@
 const { contas } = require("../../bancodedados")
 
-const numeroConta = (req, res, next) => {
+const validarNumeroConta = (req, res, next) => {
     const { numero_conta } = req.query
     if (!numero_conta) {
         return res.status(400).json({ mensagem: "Número da conta é obrigatório" })
@@ -12,7 +12,7 @@ const numeroConta = (req, res, next) => {
     next()
 }
 
-const senhaDaConta = (req, res, next) => {
+const validarSenhaDaConta = (req, res, next) => {
     const { senha } = req.query
     if (!senha) {
         return res.status(400).json({ mensagem: "A senha é obrigatória" })
@@ -25,6 +25,6 @@ const senhaDaConta = (req, res, next) => {
 }
 
 module.exports = {
-    numeroConta,
-    senhaDaConta
+    validarNumeroConta,
+    validarSenhaDaConta
 } 

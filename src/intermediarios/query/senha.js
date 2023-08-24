@@ -1,6 +1,6 @@
-const { banco, contas } = require("../../bancodedados")
+const { banco } = require("../../bancodedados")
 
-const verificarSenha = (req, res, next) => {
+const validarSenha = (req, res, next) => {
     const { senha_banco } = req.query
     if (!senha_banco) {
         return res.status(400).json({ mensagem: "Senha não informada" })
@@ -15,5 +15,5 @@ const verificarSenha = (req, res, next) => {
 }
 
 module.exports = {
-    verificarSenha
+    validarSenha
 }
