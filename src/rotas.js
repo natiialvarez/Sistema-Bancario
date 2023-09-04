@@ -5,7 +5,7 @@ const { validarSenha } = require("./intermediarios/query/senha");
 const { listarContas } = require("./controladores/consultas/contas");
 const { validarCpf, validarEmail } = require("./intermediarios/body/validarcpf&email");
 const { verificarNumero } = require("./intermediarios/params/verificarId");
-const { excluirConta } = require("./controladores/modificar contas/excluirconta");
+const { excluirConta } = require("./controladores/modificar_contas/excluirconta");
 const { validarBodyConta, validarBodyValor } = require("./intermediarios/body/validarBODYconta");
 const { depositar } = require("./controladores/transacoes/depositar");
 const { sacar } = require("./controladores/transacoes/sacar");
@@ -15,8 +15,8 @@ const { validarContaOrigem, validarContaDestino } = require("./intermediarios/bo
 const { validarNumeroConta, validarSenhaDaConta } = require("./intermediarios/query/conta&senha");
 const { consultarSaldor } = require("./controladores/consultas/consultarsaldo");
 const { extrato } = require("./controladores/consultas/extratos");
-const { atualizarusuario } = require("./controladores/modificar contas/atualizarusuario");
-const { criarConta } = require("./controladores/modificar contas/criarcontas");
+const { atualizarusuario } = require("./controladores/modificar_contas/atualizarusuario");
+const { criarConta } = require("./controladores/modificar_contas/criarcontas");
 
 rotas.get("/contas", validarSenha, listarContas)
 rotas.post("/contas", validarCpf, validarEmail, criarConta)
