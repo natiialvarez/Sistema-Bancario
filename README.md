@@ -12,3 +12,5 @@ O projeto consiste em uma API de um sistema Bancario, como um projeto piloto, e 
 
 Foram seguido para este projetos algums requisitos obrigatórios em cada etapa.
 Este projeto contem alguns erros, como a verificação do email ao atualizar os dados do usuario, mas ele sera corrigido em breve.
+
+Para executar a API, use um frameWork, como o Insomnia
