@@ -1,7 +1,6 @@
 # Sistema Bancário 🏦
 
-Este é um projeto desenvolvido como o Desafio do Modulo 2 do curso de BackEnd da Cubos Academy.
-O projeto consiste em uma API de um sistema Bancario, como um projeto piloto, e nesta RESTful API com serviços e funcionalidades básicas e essencias de um Banco.
+Este é um projeto desenvolvido como uma API de um Sistema Bancario, o projeto consiste com uma API com serviços e funcionalidades básicas e essencias de um Banco.
 
 
 ## Funcionalidades
